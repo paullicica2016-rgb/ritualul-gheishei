@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ritualul Gheishei · Spa de frumusețe și relaxare</title>
+<meta name="description" content="Ritualul Gheishei: Head Spa japonez, Koemia, masaj, tratamente faciale, gene și sprâncene, remodelare corporală, coafor și epilat. Programări pe WhatsApp.">
+<meta name="theme-color" content="#e7c3cb">
+<meta property="og:title" content="Ritualul Gheishei · Spa de frumusețe și relaxare">
+<meta property="og:description" content="Head Spa japonez, Koemia, masaj, facial, gene, remodelare corporală și coafor. Programări pe WhatsApp.">
+<meta property="og:image" content="m/hero.jpg">
+<link rel="icon" href="m/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Italiana&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --frame:#e7c3cb; --cream:#fbf6f1; --white:#fff; --beige:#ecdccb; --pink:#f6dfe4;
+  --rose:#c0607f; --rose-d:#a64d6a; --brown:#8a6446; --ink:#201b1c; --mute:#6f6264; --line:#eadbd7;
+  --sans:Manrope,system-ui,sans-serif; --disp:Italiana,Georgia,serif; --ital:'Cormorant Garamond',Georgia,serif;
+  --serif:'Cormorant Garamond',Georgia,serif; --script:'Pinyon Script',cursive; --wine:#7d2638;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--frame);color:var(--ink);font:400 16.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacing:-.01em;color:var(--wine)}
+h2{font-size:clamp(40px,5.2vw,62px);text-align:center}
+h1 em,h2 em,h3 em{font-style:italic;color:var(--rose)}
+.script{display:block;text-align:center;font:400 clamp(26px,3vw,34px)/1 var(--script);color:var(--rose);margin-bottom:4px}
+.split .script{text-align:left}
+.band .script{color:#fbd9e1}
+.sub{color:var(--mute);text-align:center;max-width:560px;margin:14px auto 0}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+
+/* foaia */
+.page{background:var(--cream);margin:10px;border-radius:30px;overflow:hidden;position:relative}
+
+/* butoane pastilă cu cerc */
+.pill{display:inline-flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:6px 6px 6px 22px;font:600 15px/1 var(--sans);color:var(--ink);box-shadow:0 8px 24px -14px rgba(32,27,28,.35);transition:transform .2s}
+.pill:hover{transform:translateY(-2px)}
+.pill i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--rose);color:#fff;flex:none}
+.pill i svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2.2}
+.pill.wa i{background:var(--brown)}
+.pill.wa i svg.w{fill:#fff;stroke:none;width:20px;height:20px}
+.pill.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pill.dark i{background:var(--rose)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(251,246,241,.92);backdrop-filter:blur(12px)}
+.top .wrap{display:grid;grid-template-columns:48px 1fr 48px;align-items:center;height:84px}
+.round{width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;cursor:pointer;font:400 22px/1 var(--sans);color:var(--ink)}
+.round.waB{background:var(--rose);border-color:var(--rose)}
+.round.waB svg{width:22px;height:22px;fill:#fff}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px}
+.brand img{height:50px;width:auto}
+.brand span{font:400 clamp(22px,3vw,30px)/1 var(--disp);letter-spacing:.02em;white-space:nowrap}
+.menu{position:fixed;inset:10px;z-index:60;background:var(--cream);border-radius:30px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+  opacity:0;pointer-events:none;transform:scale(.98);transition:.3s}
+.menu.on{opacity:1;pointer-events:auto;transform:none}
+.menu a{font:400 clamp(30px,6vw,46px)/1.15 var(--disp)}
+.menu a:hover{color:var(--rose)}
+.menu .round{position:absolute;top:20px;left:20px}
+
+/* hero */
+.hero{padding:clamp(16px,3vw,40px) 0 clamp(60px,7vw,100px);
+  background:radial-gradient(50% 60% at 85% 20%,var(--pink),transparent 70%)}
+.hcard{position:relative;border-radius:32px;overflow:hidden;min-height:min(84vh,780px);display:flex;align-items:flex-end;isolation:isolate;
+  box-shadow:0 40px 80px -40px rgba(125,38,56,.55);background:var(--pink)}
+.reel3{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--cream)}
+.reel3 video{width:100%;height:100%;object-fit:cover}
+.hcard::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(60,22,34,.55),rgba(60,22,34,0) 60%),
+             linear-gradient(180deg,rgba(32,20,24,.05) 20%,rgba(60,22,34,.6) 60%,rgba(60,22,34,.9))}
+.htext h1,.htext p,.htext .script{text-shadow:0 2px 18px rgba(40,10,20,.45)}
+.htext{padding:clamp(26px,4vw,56px);color:#fff;max-width:760px}
+.htext .script{text-align:left;color:#fbd9e1}
+.htext h1{font-size:clamp(44px,6.4vw,86px);color:#fff;margin:0 0 16px;max-width:13ch}
+.htext h1 em{color:#fbd9e1}
+.htext p{max-width:520px;margin:0 0 26px;font-size:17px;opacity:.92}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.pill.ghost{background:rgba(255,255,255,.16);color:#fff;border-color:rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.seal{position:absolute;right:clamp(18px,3vw,40px);top:clamp(18px,3vw,40px);width:clamp(100px,10vw,136px);aspect-ratio:1;border-radius:50%;background:var(--cream);
+  display:grid;place-items:center;box-shadow:0 18px 40px -18px rgba(125,38,56,.5)}
+.seal img{width:62%;height:auto}
+.seal svg{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);animation:spin 28s linear infinite}
+.seal text{font:600 9.5px var(--sans);letter-spacing:.32em;fill:var(--rose);text-transform:uppercase}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* carusel servicii */
+.svcs{padding:10px 0 clamp(60px,7vw,90px)}
+.svcs h2{margin-bottom:6px}
+.track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px max(20px,calc((100vw - 1180px)/2)) 30px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 clamp(250px,26vw,300px);aspect-ratio:3/4.1;position:relative;border-radius:24px;overflow:hidden;scroll-snap-align:center;
+  border:5px solid var(--rose);box-shadow:0 22px 40px -24px rgba(32,27,28,.55);transition:transform .35s;isolation:isolate}
+.card:nth-child(odd){transform:rotate(-2.5deg)}.card:nth-child(even){transform:rotate(2.5deg);border-color:var(--brown)}
+.card:hover{transform:rotate(0) translateY(-6px)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,rgba(32,20,24,.82))}
+.tag{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.95);border-radius:999px;padding:6px 12px;font:600 12.5px/1 var(--sans);color:var(--ink)}
+.card .t{position:absolute;left:18px;right:18px;bottom:18px;color:#fff}
+.card h3{font:italic 600 clamp(30px,3vw,36px)/1 var(--ital);margin-bottom:6px;letter-spacing:0;color:#fff}
+.card p{font-size:14px;opacity:.9;line-height:1.4}
+.hint{text-align:center;color:var(--mute);font-size:13.5px}
+
+/* margine dantelă */
+.scallop{height:34px;background:radial-gradient(circle at 50% 0,var(--cream) 24px,var(--rose) 25px) 0 0/48px 34px repeat-x}
+.scallop.up{background:radial-gradient(circle at 50% 100%,var(--cream) 24px,var(--rose) 25px) 0 0/48px 34px repeat-x}
+
+/* bandă roz: Koemia */
+.band{background:var(--rose);color:#fff;padding:clamp(50px,6vw,80px) 0}
+.band h2,.band .sub{color:#fff}
+.band .sub{opacity:.9}
+.kgrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center;margin-top:46px}
+.kmedia{position:relative;height:clamp(420px,42vw,540px)}
+.kmedia > div{position:absolute;border-radius:24px;overflow:hidden;border:5px solid #fff;box-shadow:0 26px 50px -26px rgba(0,0,0,.5)}
+.kmedia video,.kmedia img{width:100%;height:100%;object-fit:cover}
+.kmedia .a{width:58%;aspect-ratio:9/16;left:4%;top:0;transform:rotate(-3deg)}
+.kmedia .b{width:46%;aspect-ratio:3/4;right:2%;bottom:0;transform:rotate(4deg)}
+.kmedia .b img{object-position:85% 70%}
+.steps{list-style:none;counter-reset:s;display:grid;gap:12px;margin-bottom:26px}
+.steps li{counter-increment:s;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:14px 16px 14px 62px;position:relative;font-size:15px;line-height:1.45}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:#fff;color:var(--rose);display:grid;place-items:center;font-weight:800}
+.steps b{display:block;font-size:16px}
+.packs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.packs span{background:#fff;color:var(--ink);border-radius:999px;padding:9px 14px;font-size:14px}
+.packs b{color:var(--rose)}
+.packs .hl{background:var(--ink);color:#fff}.packs .hl b{color:#f6c9d4}
+
+/* video prezentare */
+.pres{display:grid;grid-template-columns:auto 1fr;gap:clamp(30px,5vw,70px);align-items:center;margin-top:clamp(60px,7vw,90px);background:rgba(255,255,255,.12);border-radius:30px;padding:clamp(22px,3vw,36px)}
+.phone{position:relative;width:min(300px,72vw);aspect-ratio:9/16;border-radius:30px;overflow:hidden;border:6px solid #fff;margin-inline:auto;transform:rotate(-2deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.phone video{width:100%;height:100%;object-fit:cover}
+.play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,transparent 45%,rgba(32,20,24,.55));border:0;cursor:pointer;color:#fff;font:600 14px var(--sans)}
+.play span{display:flex;flex-direction:column;align-items:center;gap:12px}
+.play i{width:72px;height:72px;border-radius:50%;background:#fff;display:grid;place-items:center;animation:pulse 2.2s infinite}
+.play i::before{content:"";border-left:22px solid var(--rose);border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+.play.hide{display:none}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}50%{box-shadow:0 0 0 16px rgba(255,255,255,0)}}
+.pres h3{font-size:clamp(32px,3.6vw,44px);margin-bottom:12px;color:#fff}
+.pres h3 em{color:#fbd9e1}
+.band h2{color:#fff}.band h2 em{color:#fbd9e1}
+.pres p{opacity:.9;margin-bottom:22px}
+
+/* head spa + înainte/după */
+.sec{padding:clamp(60px,7vw,100px) 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.split h2{text-align:left}
+.split .sub{text-align:left;margin:14px 0 22px}
+.chk{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:26px}
+.chk li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 14px;font-size:14.5px;font-weight:500;display:flex;gap:8px;align-items:center}
+.chk li::before{content:"✿";color:var(--rose)}
+.cmp{position:relative;aspect-ratio:16/10;border-radius:26px;overflow:hidden;border:6px solid #fff;box-shadow:0 26px 50px -26px rgba(32,27,28,.5);user-select:none;transform:rotate(1.5deg)}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp .before{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.cmp .handle{position:absolute;top:0;bottom:0;left:var(--p);width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.cmp .handle i{position:absolute;top:50%;left:50%;width:50px;height:50px;transform:translate(-50%,-50%);border-radius:50%;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.25);display:grid;place-items:center;color:var(--rose);font:800 18px/1 var(--sans)}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.lbl{position:absolute;top:14px;padding:6px 12px;border-radius:999px;font:700 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
+.lbl.l{left:14px;background:rgba(32,27,28,.75);color:#fff}.lbl.r{right:14px;background:#fff;color:var(--rose)}
+.cmp-cap{font-size:13.5px;color:var(--mute);text-align:center;margin-top:16px}
+
+/* prețuri */
+.prices{padding:clamp(60px,7vw,100px) 0;background:var(--white)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px;align-items:start}
+.pc{background:var(--pink);border-radius:26px;padding:0 0 22px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(32,27,28,.45)}
+.pc:nth-child(3n+2){background:var(--beige)}
+.pc:nth-child(odd){transform:rotate(-.8deg)}.pc:nth-child(even){transform:rotate(.8deg)}
+.pc .ph{height:150px;position:relative}
+.pc .ph img{width:100%;height:100%;object-fit:cover}
+.pc .ph span{position:absolute;left:16px;bottom:-18px;width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;box-shadow:0 6px 16px -6px rgba(0,0,0,.3)}
+.pc h3{font:italic 600 32px/1.05 var(--ital);padding:28px 22px 4px;letter-spacing:0}
+.pc .note{font-size:13px;color:var(--mute);padding:0 22px;margin-bottom:6px}
+.pc h4{font:700 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--rose-d);padding:14px 22px 4px}
+.r{display:flex;align-items:baseline;gap:8px;padding:6px 22px;font-size:15px}
+.r i{flex:1;border-bottom:1.5px dotted rgba(32,27,28,.25);transform:translateY(-4px);min-width:14px}
+.r b{font-weight:700;white-space:nowrap}
+.pc .pill{margin:16px 22px 0;font-size:14px}
+
+/* lucrări */
+.works{padding:clamp(60px,7vw,100px) 0;text-align:center}
+.wtitle{font:400 clamp(58px,8vw,96px)/1.1 var(--script);color:var(--rose);position:relative;display:inline-block;margin:24px 0}
+.wtitle::before,.wtitle::after{content:"✦";position:absolute;font-size:.42em;color:var(--brown);font-style:normal}
+.wtitle::before{left:-.6em;top:.1em}.wtitle::after{right:-.6em;bottom:.1em}
+.scatter{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;max-width:1100px;margin:0 auto}
+.scatter figure{border-radius:20px;overflow:hidden;border:5px solid #fff;box-shadow:0 18px 34px -20px rgba(32,27,28,.5);aspect-ratio:3/4;background:var(--pink)}
+.scatter img{width:100%;height:100%;object-fit:cover}
+.scatter figure:nth-child(4n+1){transform:rotate(-4deg) translateY(10px)}
+.scatter figure:nth-child(4n+2){transform:rotate(3deg)}
+.scatter figure:nth-child(4n+3){transform:rotate(-2deg) translateY(16px)}
+.scatter figure:nth-child(4n){transform:rotate(4deg) translateY(4px)}
+.reels{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:40px max(20px,calc((100vw - 1180px)/2)) 20px;scrollbar-width:none}
+.reels::-webkit-scrollbar{display:none}
+.reels video{flex:0 0 clamp(160px,17vw,210px);aspect-ratio:9/16;object-fit:cover;border-radius:22px;border:5px solid #fff;scroll-snap-align:center;box-shadow:0 18px 34px -20px rgba(32,27,28,.5);background:var(--pink)}
+.reels video:nth-child(odd){transform:rotate(-2deg)}.reels video:nth-child(even){transform:rotate(2deg)}
+
+/* voucher */
+.voucher{margin:0 auto;max-width:980px;background:var(--beige);border-radius:30px;padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;transform:rotate(-.6deg)}
+.voucher img{width:110px;height:auto}
+.voucher h3{font-size:clamp(32px,3.6vw,44px);margin-bottom:8px}
+.voucher p{color:var(--mute);margin-bottom:18px}
+
+/* faq */
+.faq{padding:clamp(60px,7vw,100px) 0}
+.faq .list{max-width:760px;margin:40px auto 0;display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:20px;padding:4px 22px}
+summary{cursor:pointer;list-style:none;font-weight:600;padding:16px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";width:32px;height:32px;border-radius:50%;background:var(--pink);display:grid;place-items:center;color:var(--rose);flex:none;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute);padding:0 0 18px}
+
+/* final */
+.end{background:var(--rose);color:#fff;text-align:center;padding:clamp(56px,7vw,90px) 0 clamp(40px,5vw,60px)}
+.end img{height:110px;margin:0 auto 14px;filter:brightness(0) invert(1)}
+.end h2{color:#fff;margin-bottom:12px}
+.end p{opacity:.9;margin-bottom:26px}
+.end .foot{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);font-size:13.5px;opacity:.85;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.fab{position:fixed;right:22px;bottom:22px;z-index:50;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.35)}
+.fab svg{width:32px;height:32px;fill:#fff}
+#petals{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:45}
+
+.rv{opacity:0;translate:0 22px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),translate .8s cubic-bezier(.2,.7,.2,1)}
+.rv.vis{opacity:1;translate:0 0}
+
+@media(max-width:900px){
+  .kgrid,.split,.pres{grid-template-columns:1fr}
+  .reel3{grid-template-columns:1fr}
+  .reel3 .v2,.reel3 .v3{display:none}
+  .hcard{min-height:calc(100svh - 110px)}
+  .kmedia{height:auto;aspect-ratio:1/1.05;max-width:440px;width:100%;margin:0 auto}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .scatter{grid-template-columns:repeat(3,1fr)}
+  .scatter figure:nth-child(n+7){display:none}
+  .split .cmp{order:-1}
+}
+@media(max-width:600px){
+  .page{margin:6px;border-radius:24px}
+  .top .wrap{height:72px;grid-template-columns:44px 1fr 44px}
+  .brand img{height:40px}.brand span{font-size:21px}
+  .round{width:42px;height:42px}
+  .seal{width:84px}
+  .htext h1{font-size:42px}
+  .htext p{font-size:15.5px}
+  .hcard{border-radius:24px}
+  .btns .pill{width:100%;justify-content:space-between}
+  .pgrid{grid-template-columns:1fr}
+  .chk{grid-template-columns:1fr}
+  .scatter{grid-template-columns:1fr 1fr;gap:12px}
+  .scatter figure:nth-child(n+5){display:none}
+  .voucher{grid-template-columns:1fr;text-align:center}.voucher img{margin:0 auto}
+  .pill{font-size:14px;padding-left:18px}
+  .fab{right:16px;bottom:16px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;translate:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2Zm5.8 14.02c-.25.7-1.45 1.34-2 1.4-.52.06-1.17.09-1.9-.12a17 17 0 0 1-1.72-.64c-3.02-1.3-5-4.35-5.15-4.55-.15-.2-1.23-1.64-1.23-3.12 0-1.49.78-2.22 1.05-2.52.28-.3.6-.38.8-.38l.58.01c.19 0 .43-.07.67.5.25.6.84 2.07.91 2.22.08.15.13.32.03.52-.1.2-.15.32-.3.5l-.45.52c-.15.15-.3.31-.13.6.17.3.77 1.27 1.65 2.05 1.13 1 2.09 1.32 2.39 1.47.3.15.47.12.65-.07.17-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.08.12.08.72-.17 1.42Z"/></symbol>
+  <symbol id="arr" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+</svg>
+
+<div class="page">
+<header class="top" id="top">
+  <div class="wrap">
+    <button class="round" id="mbtn" aria-label="Deschide meniul" aria-expanded="false">+</button>
+    <a href="#" class="brand"><img src="m/logo.png" alt=""><span>Ritualul Gheishei</span></a>
+    <a class="round waB wa" data-msg="Bună! Aș dori o programare." href="#" aria-label="Scrie-ne pe WhatsApp"><svg><use href="#wa"/></svg></a>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Meniu">
+  <button class="round" id="mclose" aria-label="Închide meniul">×</button>
+  <a href="#servicii">Servicii</a><a href="#koemia">Koemia</a><a href="#headspa">Head Spa</a><a href="#preturi">Prețuri</a><a href="#galerie">Galerie</a><a href="#intrebari">Întrebări</a>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hcard rv">
+      <div class="reel3" aria-hidden="true">
+        <video class="v1" src="m/montaj.mp4" poster="m/montaj.jpg" autoplay muted loop playsinline></video>
+        <video class="v2" src="m/montaj.mp4" muted loop playsinline data-offset="9.6"></video>
+        <video class="v3" src="m/montaj.mp4" muted loop playsinline data-offset="19.2"></video>
+      </div>
+      <div class="htext">
+        <span class="script">spa de frumusețe și relaxare</span>
+        <h1>Ritualul tău de <em>frumusețe</em> și liniște</h1>
+        <p>Head Spa japonez, Koemia, masaj, facial, gene și sprâncene, remodelare corporală, coafor și epilat. Totul într-un singur salon.</p>
+        <div class="btns">
+          <a class="pill wa" data-msg="Bună! Aș dori o programare." href="#">Programează-te pe WhatsApp<i><svg class="w"><use href="#wa"/></svg></i></a>
+          <a class="pill ghost" href="#servicii">Vezi serviciile<i><svg><use href="#arr"/></svg></i></a>
+        </div>
+      </div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
+          <text><textPath href="#circ">ritualul gheishei · spa · head spa · </textPath></text></svg>
+        <img src="m/logo.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICII -->
+<section class="svcs" id="servicii">
+  <div class="wrap"><span class="script rv">serviciile noastre</span><h2 class="rv">Alege-ți <em>ritualul</em></h2><p class="sub rv">Opt categorii de îngrijire. Glisează și apasă pe un serviciu.</p></div>
+  <div class="track rv" aria-label="Servicii">
+    <a class="card" href="#headspa"><img src="m/ball.jpg" alt=""><span class="tag">Ritual japonez</span><div class="t"><h3>Head Spa</h3><p>Scanare scalp, curățare, masaj</p></div></a>
+    <a class="card" href="#koemia"><img src="m/koemia-p.jpg" alt=""><span class="tag">de la 300 lei</span><div class="t"><h3>Koemia</h3><p>Tratament personalizat pentru păr</p></div></a>
+    <a class="card" href="#p-masaj"><img src="m/masaj.jpg" alt=""><span class="tag">de la 100 lei</span><div class="t"><h3>Masaj</h3><p>Relaxare, terapeutic, Lomi Lomi</p></div></a>
+    <a class="card" href="#p-facial"><img src="m/mask.jpg" alt=""><span class="tag">de la 150 lei</span><div class="t"><h3>Facial</h3><p>Ten curat, fin și radiant</p></div></a>
+    <a class="card" href="#p-gene"><img src="m/spr4.jpg" alt=""><span class="tag">de la 50 lei</span><div class="t"><h3>Gene &amp; sprâncene</h3><p>Laminare, vopsit, extensii</p></div></a>
+    <a class="card" href="#p-corp"><img src="m/corp-ba.jpg" alt=""><span class="tag">de la 70 lei</span><div class="t"><h3>Remodelare</h3><p>Cavitație, RF, termocuvertură</p></div></a>
+    <a class="card" href="#p-coafor"><img src="m/par.jpg" alt=""><span class="tag">de la 50 lei</span><div class="t"><h3>Coafor</h3><p>Spălat, coafat, bucle</p></div></a>
+    <a class="card" href="#p-facial"><img src="m/g-coafor.jpg" alt=""><span class="tag">de la 15 lei</span><div class="t"><h3>Epilat</h3><p>Față, brațe, axilă, picioare</p></div></a>
+  </div>
+  <p class="hint">← glisează →</p>
+</section>
+
+<!-- KOEMIA -->
+<div class="scallop"></div>
+<section class="band" id="koemia">
+  <div class="wrap">
+    <span class="script rv">tratamentul semnătură</span>
+    <h2 class="rv">Koemia: părul tău, <em>analizat fir cu fir</em></h2>
+    <p class="sub rv">Tratamentul nostru semnătură: cinci dispozitive conectate, un singur protocol, creat exact pentru părul tău.</p>
+    <div class="kgrid">
+      <div class="kmedia rv">
+        <div class="a"><video src="m/koemia.mp4" poster="m/koemia-p.jpg" autoplay muted loop playsinline preload="none" aria-label="Aplicația Koemia cu formula personalizată"></video></div>
+        <div class="b"><img src="m/prezentare.jpg" alt="Aparatul Koemia din salon" loading="lazy"></div>
+      </div>
+      <div>
+        <ol class="steps rv">
+          <li><b>Senzor optic HD</b>Scanează firul și măsoară hidratarea, porozitatea și deteriorarea.</li>
+          <li><b>Mixer inteligent</b>Prepară formula activă în concentrația cerută de analiză.</li>
+          <li><b>Uscător și placă conectate</b>Temperatura și aerul se adaptează tipului tău de păr.</li>
+          <li><b>Micronebulizator</b>Ingredientele active pătrund uniform în fibra capilară.</li>
+        </ol>
+        <div class="packs rv">
+          <span>1 ședință · <b>300 lei</b></span><span>3 ședințe · <b>800 lei</b></span><span>4 ședințe · <b>1000 lei</b></span>
+          <span>6 ședințe · <b>1400 lei</b></span><span class="hl">Koemia + Head Spa · <b>450 lei</b></span>
+        </div>
+        <a class="pill dark wa rv" data-msg="Bună! Aș dori o programare pentru Koemia." href="#">Programează Koemia<i><svg><use href="#arr"/></svg></i></a>
+      </div>
+    </div>
+
+    <div class="pres rv" id="prezentare">
+      <div class="phone">
+        <video id="presv" src="m/prezentare.mp4" poster="m/prezentare.jpg" playsinline preload="none" data-manual></video>
+        <button class="play" id="presbtn" aria-label="Pornește videoul cu sunet"><span><i></i>Apasă și ascultă</span></button>
+      </div>
+      <div>
+        <h3>Îți explicăm Koemia <em>pas cu pas</em></h3>
+        <p>Vezi cum arată aparatul, cum se face analiza firului de păr și ce primești la o ședință. Pornește videoul cu sunet.</p>
+        <a class="pill wa" data-msg="Bună! Am văzut videoul despre Koemia și aș dori o programare." href="#">Vreau și eu Koemia<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="scallop up"></div>
+
+<!-- HEAD SPA + ÎNAINTE/DUPĂ -->
+<section class="sec" id="headspa">
+  <div class="wrap split">
+    <div>
+      <span class="script rv">ritualul japonez</span>
+      <h2 class="rv">Head Spa <em>japonez</em></h2>
+      <p class="sub rv">Un ritual pentru momentele în care ai nevoie să încetinești ritmul. Începem cu scanarea scalpului la microscop, apoi curățăm, hidratăm și relaxăm cu un masaj lung al capului, gâtului și umerilor.</p>
+      <ul class="chk rv">
+        <li>Scanare scalp la microscop</li><li>Relaxare profundă</li>
+        <li>Scalp curat și îngrijit</li><li>Păr hidratat și strălucitor</li>
+      </ul>
+      <a class="pill wa rv" data-msg="Bună! Aș dori o programare la Head Spa." href="#">Programează Head Spa<i><svg class="w"><use href="#wa"/></svg></i></a>
+    </div>
+    <div class="rv">
+      <div class="cmp" id="cmp" style="--p:50%">
+        <img src="m/scalp-dupa.jpg" alt="Scalp după Head Spa: curat">
+        <div class="before"><img src="m/scalp-inainte.jpg" alt="Scalp înainte de Head Spa: depuneri și sebum"></div>
+        <span class="lbl l">Înainte</span><span class="lbl r">După</span>
+        <div class="handle" aria-hidden="true"><i>‹ ›</i></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Compară scalpul înainte și după">
+      </div>
+      <p class="cmp-cap">Scalpul la microscop, înainte și după ritual. Trage de cerc ca să compari.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PREȚURI -->
+<section class="prices" id="preturi">
+  <div class="wrap">
+    <span class="script rv">totul la vedere</span>
+    <h2 class="rv">Servicii <em>și prețuri</em></h2>
+    <p class="sub rv">Toate serviciile noastre, la vedere. Pentru programare, apasă butonul de pe card.</p>
+    <div class="pgrid">
+      <article class="pc rv" id="p-masaj">
+        <div class="ph"><img src="m/masaj.jpg" alt="" loading="lazy"><span>🌸</span></div>
+        <h3>Masaj</h3><p class="note">Terapeutic · anticelulitic · Lomi Lomi · relaxare · clasic · sportiv</p>
+        <div class="r">60 minute<i></i><b>150 lei</b></div>
+        <div class="r">90 minute<i></i><b>200 lei</b></div>
+        <h4>Ritualuri de 50 min</h4>
+        <div class="r">Reflexoterapie<i></i><b>100 lei</b></div>
+        <div class="r">Clasic cap și gât<i></i><b>120 lei</b></div>
+        <div class="r">Cosmetic cap și gât<i></i><b>120 lei</b></div>
+        <div class="r">Cap, gât și decolteu<i></i><b>150 lei</b></div>
+        <a class="pill wa" data-msg="Bună! Aș dori o programare la masaj." href="#">Programează<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </article>
+      <article class="pc rv" id="p-facial">
+        <div class="ph"><img src="m/facial2.jpg" alt="" loading="lazy"><span>✨</span></div>
+        <h3>Facial &amp; epilat</h3>
+        <h4>Tratamente faciale</h4>
+        <div class="r">Farmecul Gheishei<i></i><b>150 lei</b></div>
+        <div class="r">Strălucirea Gheishei<i></i><b>200 lei</b></div>
+        <div class="r">Răsfățul Gheishei<i></i><b>250 lei</b></div>
+        <div class="r">Microdermabraziune<i></i><b>150 lei</b></div>
+        <div class="r">Mamă + Fiică<i></i><b>450 lei</b></div>
+        <h4>Epilat</h4>
+        <div class="r">Mustață<i></i><b>15 lei</b></div>
+        <div class="r">Axilă<i></i><b>20 lei</b></div>
+        <div class="r">Brațe scurt / lung<i></i><b>25 / 40 lei</b></div>
+        <div class="r">Picioare scurt / lung<i></i><b>35 / 50 lei</b></div>
+        <a class="pill wa" data-msg="Bună! Aș dori o programare pentru facial/epilat." href="#">Programează<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </article>
+      <article class="pc rv" id="p-gene">
+        <div class="ph"><img src="m/spr2.jpg" alt="" loading="lazy"><span>👁️</span></div>
+        <h3>Gene &amp; sprâncene</h3>
+        <div class="r">Laminare + vopsit sprâncene<i></i><b>250 lei</b></div>
+        <div class="r">Laminare sprâncene<i></i><b>220 lei</b></div>
+        <div class="r">Laminare gene<i></i><b>150 lei</b></div>
+        <div class="r">Pensat + vopsit<i></i><b>130 lei</b></div>
+        <div class="r">Pensat<i></i><b>100 lei</b></div>
+        <div class="r">Vopsit gene<i></i><b>50 lei</b></div>
+        <h4>Extensii · întreținere</h4>
+        <div class="r">1D<i></i><b>120 · 100 lei</b></div>
+        <div class="r">2D<i></i><b>150 · 120 lei</b></div>
+        <div class="r">3D<i></i><b>170 · 140 lei</b></div>
+        <div class="r">4D<i></i><b>190 · 160 lei</b></div>
+        <div class="r">Îndepărtat extensii<i></i><b>50 lei</b></div>
+        <a class="pill wa" data-msg="Bună! Aș dori o programare pentru gene/sprâncene." href="#">Programează<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </article>
+      <article class="pc rv" id="p-corp">
+        <div class="ph"><img src="m/corp-ba.jpg" alt="Înainte și după remodelare" loading="lazy"><span>💗</span></div>
+        <h3>Remodelare corporală</h3>
+        <h4>O ședință</h4>
+        <div class="r">Cavitație + radiofrecvență<i></i><b>120 lei</b></div>
+        <div class="r">Termocuvertură<i></i><b>100 lei</b></div>
+        <div class="r">Electrostimulare<i></i><b>70 lei</b></div>
+        <h4>Pachete 5 + 1 gratuit</h4>
+        <div class="r">Electrostimulare<i></i><b>350 lei</b></div>
+        <div class="r">Termocuvertură<i></i><b>500 lei</b></div>
+        <div class="r">Cavitație + RF<i></i><b>600 lei</b></div>
+        <div class="r">Cavitație + RF + termo<i></i><b>1200 lei</b></div>
+        <div class="r">Toate patru<i></i><b>1600 lei</b></div>
+        <a class="pill wa" data-msg="Bună! Aș dori detalii despre remodelarea corporală." href="#">Programează<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </article>
+      <article class="pc rv" id="p-coafor">
+        <div class="ph"><img src="m/par.jpg" alt="" loading="lazy" style="object-position:center 35%"><span>💇‍♀️</span></div>
+        <h3>Coafor</h3>
+        <div class="r">Spălat + uscat<i></i><b>50–80 lei</b></div>
+        <div class="r">Abonament 4 ședințe<i></i><b>250 lei</b></div>
+        <div class="r">Tras la perie<i></i><b>80 lei</b></div>
+        <div class="r">Coafat cu placa<i></i><b>80 lei</b></div>
+        <div class="r">Coafat cu ondulatorul<i></i><b>100 lei</b></div>
+        <div class="r">Bucle afro<i></i><b>250 lei</b></div>
+        <a class="pill wa" data-msg="Bună! Aș dori o programare la coafor." href="#">Programează<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </article>
+      <article class="pc rv" id="p-par">
+        <div class="ph"><img src="m/ball.jpg" alt="" loading="lazy"><span>🌿</span></div>
+        <h3>Head Spa &amp; Koemia</h3>
+        <div class="r">Koemia, 1 ședință<i></i><b>300 lei</b></div>
+        <div class="r">Koemia, 3 ședințe<i></i><b>800 lei</b></div>
+        <div class="r">Koemia, 4 ședințe<i></i><b>1000 lei</b></div>
+        <div class="r">Koemia, 6 ședințe<i></i><b>1400 lei</b></div>
+        <div class="r">Koemia + Head Spa<i></i><b>450 lei</b></div>
+        <p class="note" style="margin-top:8px">Pentru Head Spa separat, întreabă-ne pe WhatsApp.</p>
+        <a class="pill wa" data-msg="Bună! Aș dori o programare la Head Spa / Koemia." href="#">Programează<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="works" id="galerie">
+  <div class="wrap">
+    <span class="wtitle rv">Din salon</span>
+    <p class="sub rv" style="margin-bottom:40px">Un colț de liniște cu flori de cireș, lumânări și apă care curge.</p>
+    <div class="scatter rv">
+      <figure><img src="m/flowers.jpg" alt="Perete de flori de cireș" loading="lazy"></figure>
+      <figure><img src="m/sign.jpg" alt="Logo-ul salonului luminat" loading="lazy"></figure>
+      <figure><img src="m/candles.jpg" alt="Lumânări aprinse" loading="lazy"></figure>
+      <figure><img src="m/spr1.jpg" alt="Sprâncene laminate" loading="lazy"></figure>
+      <figure><img src="m/bed.jpg" alt="Patul de Head Spa" loading="lazy"></figure>
+      <figure><img src="m/fountain.jpg" alt="Fântână decorativă" loading="lazy"></figure>
+      <figure><img src="m/candles2.jpg" alt="Lumânări parfumate" loading="lazy"></figure>
+      <figure><img src="m/spr5.jpg" alt="Sprâncene vopsite" loading="lazy"></figure>
+      <figure><img src="m/facial2.jpg" alt="Tratament facial" loading="lazy"></figure>
+      <figure><img src="m/scanner.jpg" alt="Scanarea scalpului la microscop" loading="lazy"></figure>
+    </div>
+  </div>
+  <div class="reels rv" aria-label="Clipuri din salon">
+    <video src="m/reel1.mp4" poster="m/reel1.jpg" muted loop playsinline preload="none" aria-label="Masaj de relaxare"></video>
+    <video src="m/reel2.mp4" poster="m/reel2.jpg" muted loop playsinline preload="none" aria-label="Ritual Head Spa"></video>
+    <video src="m/reel3.mp4" poster="m/reel3.jpg" muted loop playsinline preload="none" aria-label="Scanarea scalpului"></video>
+    <video src="m/reel4.mp4" poster="m/reel4.jpg" muted loop playsinline preload="none" aria-label="Tratament facial"></video>
+    <video src="m/reel5.mp4" poster="m/reel5.jpg" muted loop playsinline preload="none" aria-label="Masaj al scalpului"></video>
+  </div>
+  <div class="wrap" style="margin-top:50px">
+    <div class="voucher rv">
+      <img src="m/logo.png" alt="">
+      <div>
+        <h3>Voucher cadou <em>pentru cineva drag</em></h3>
+        <p>Oferă unei persoane dragi un moment de răsfăț. Alegi valoarea sau ritualul, noi pregătim voucherul.</p>
+        <a class="pill wa" data-msg="Bună! Aș dori un voucher cadou." href="#">Comandă un voucher<i><svg class="w"><use href="#wa"/></svg></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÎNTREBĂRI -->
+<section class="faq" id="intrebari" style="background:var(--white)">
+  <div class="wrap">
+    <span class="script rv">te ajutăm</span>
+    <h2 class="rv">Întrebări <em>frecvente</em></h2>
+    <div class="list">
+      <details class="rv"><summary>Cum fac o programare?</summary><p>Apasă orice buton de WhatsApp de pe site și scrie-ne ce serviciu dorești. Îți răspundem cu orele libere.</p></details>
+      <details class="rv"><summary>Ce este Koemia?</summary><p>Un tratament personalizat pentru păr: un senzor optic analizează firul, iar formula, temperatura uscătorului și a plăcii se adaptează exact rezultatului.</p></details>
+      <details class="rv"><summary>Care e diferența dintre Head Spa și Koemia?</summary><p>Head Spa e ritualul de relaxare și îngrijire a scalpului, cu scanare la microscop și masaj. Koemia tratează firul de păr. Le poți combina în pachetul Koemia + Head Spa, la 450 lei.</p></details>
+      <details class="rv"><summary>Pot oferi o ședință cadou?</summary><p>Da, avem vouchere cadou. Scrie-ne pe WhatsApp valoarea sau ritualul dorit.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="end">
+  <div class="wrap">
+    <img src="m/logo.png" alt="Ritualul Gheishei" class="rv">
+    <span class="script rv" style="color:#fbd9e1">te așteptăm</span>
+    <h2 class="rv">Rezervă-ți <em style="color:#fbd9e1">momentul tău</em></h2>
+    <p class="rv">Scrie-ne pe WhatsApp ce serviciu dorești și îți găsim ora potrivită.</p>
+    <a class="pill dark wa rv" data-msg="Bună! Aș dori o programare." href="#">Programează-te pe WhatsApp<i><svg class="w" style="fill:#fff"><use href="#wa"/></svg></i></a>
+    <div class="foot"><span>© Ritualul Gheishei · Spa de frumusețe și relaxare</span><a href="https://www.instagram.com/ritualulgheishei/" target="_blank" rel="noopener">Instagram · @ritualulgheishei</a></div>
+  </div>
+</footer>
+</div>
+
+<a class="fab wa" data-msg="Bună! Aș dori o programare." href="#" aria-label="Scrie-ne pe WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+/* ===== NUMĂRUL DE WHATSAPP: schimbă doar aici (40 + numărul fără 0, fără +) ===== */
+const WA = "40700000000";
+
+document.querySelectorAll('.wa').forEach(a=>{
+  a.href=`https://wa.me/${WA}?text=${encodeURIComponent(a.dataset.msg||'Bună!')}`;
+  a.target='_blank';a.rel='noopener';
+});
+
+/* meniu */
+const menu=document.getElementById('menu'),mb=document.getElementById('mbtn');
+const setM=o=>{menu.classList.toggle('on',o);mb.setAttribute('aria-expanded',o)};
+mb.onclick=()=>setM(true);document.getElementById('mclose').onclick=()=>setM(false);
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>setM(false));
+addEventListener('keydown',e=>{if(e.key==='Escape')setM(false)});
+
+/* apariții */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* videouri: rulează doar când se văd */
+const vo=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.preload='auto';v.play().catch(()=>{})}else v.pause()}),{threshold:.1});
+document.querySelectorAll('video:not([data-manual])').forEach(v=>vo.observe(v));
+
+/* montaj hero: coloanele 2 și 3 pornesc decalat, ca să se vadă clipuri diferite */
+document.querySelectorAll('.reel3 video[data-offset]').forEach(v=>{
+  v.addEventListener('loadedmetadata',()=>{v.currentTime=+v.dataset.offset%v.duration},{once:true});
+});
+
+/* glisor înainte/după */
+const cmp=document.getElementById('cmp'),rng=cmp.querySelector('input');
+rng.addEventListener('input',()=>cmp.style.setProperty('--p',rng.value+'%'));
+
+/* video prezentare cu sunet */
+const pv=document.getElementById('presv'),pb=document.getElementById('presbtn');
+pb.onclick=()=>{pv.muted=false;pv.controls=true;pv.play();pb.classList.add('hide')};
+new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting&&!pv.paused)pv.pause()}),{threshold:.2}).observe(pv);
+
+/* petale de sakura */
+(()=>{
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const c=document.createElement('canvas');c.id='petals';c.setAttribute('aria-hidden','true');document.body.append(c);
+  const x=c.getContext('2d');let W,H;
+  const fit=()=>{const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)};
+  fit();addEventListener('resize',fit);
+  const cols=['#f4a7b9','#ee8fa6','#f9c6d2','#e5677f','#fbd9e1','#d94b68'];
+  const N=W<700?7:12;
+  const mk=top=>({x:Math.random()*W,y:top?-20:Math.random()*H,s:5+Math.random()*6,vy:.12+Math.random()*.18,vx:-.05+Math.random()*.15,
+    a:Math.random()*6.28,va:-.006+Math.random()*.012,sw:Math.random()*6.28,vs:.004+Math.random()*.006,f:Math.random()*6.28,
+    c:cols[Math.random()*cols.length|0],o:.35+Math.random()*.3});
+  const P=Array.from({length:N},()=>mk(false));
+  const draw=p=>{x.save();x.translate(p.x,p.y);x.rotate(p.a);x.scale(1,Math.abs(Math.cos(p.f))*.7+.3);
+    x.globalAlpha=p.o;x.fillStyle=p.c;x.beginPath();x.moveTo(0,-p.s);
+    x.bezierCurveTo(p.s*.9,-p.s*.6,p.s*.7,p.s*.6,0,p.s);x.bezierCurveTo(-p.s*.7,p.s*.6,-p.s*.9,-p.s*.6,0,-p.s);x.fill();
+    x.globalAlpha=p.o*.35;x.fillStyle='#fff';x.beginPath();x.ellipse(-p.s*.15,-p.s*.25,p.s*.18,p.s*.45,0,0,6.28);x.fill();x.restore()};
+  let run=true;document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(loop)});
+  function loop(){if(!run)return;x.clearRect(0,0,W,H);
+    for(const p of P){p.sw+=p.vs;p.x+=p.vx+Math.sin(p.sw)*.25;p.y+=p.vy;p.a+=p.va;p.f+=.008;
+      if(p.y>H+20||p.x<-30||p.x>W+30)Object.assign(p,mk(true));draw(p)}
+    requestAnimationFrame(loop)}
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
